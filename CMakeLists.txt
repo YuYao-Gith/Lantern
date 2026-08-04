@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: LGPL-3.0-or-later
 cmake_minimum_required(VERSION 3.16)
 project(Lantern VERSION 2.0 LANGUAGES CXX)
 

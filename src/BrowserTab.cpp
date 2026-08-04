@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: LGPL-3.0-or-later
 #include "BrowserTab.h"
 #include "WelcomePage.h"
 #include "AiAssistant.h"

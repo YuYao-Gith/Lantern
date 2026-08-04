@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: LGPL-3.0-or-later
 #include "AiAssistant.h"
 #include "Settings.h"
 #include <QWebEnginePage>

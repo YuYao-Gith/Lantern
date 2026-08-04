@@ -1,4 +1,5 @@
 #!/bin/bash
+# SPDX-License-Identifier: LGPL-3.0-or-later
 # 将本地 QtWebEngine 开发依赖（lib/qt6-dev）打包为单个 tar.gz
 #
 # 用途：在已配置好的机器上打包依赖，上传到网盘/对象存储后，

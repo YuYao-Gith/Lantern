@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: LGPL-3.0-or-later
 #include "HistoryManager.h"
 #include "Settings.h"
 #include <QFile>

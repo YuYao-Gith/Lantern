@@ -96,9 +96,9 @@ on the bookmark bar to summarize the current page.
 
 ## 📦 Distributing the Dependency Archive (Important)
 
-The QtWebEngine dev files are large (52MB / 1700+ files). Committing them to a
-repository would hit the **Gitee 20-files-per-upload limit**, so the repository
-contains **no dependency files at all**.
+The QtWebEngine dev files are large (52MB / 1700+ files). Committing them would
+bloat the repository and slow down clones (GitHub's per-file limit is 100MB),
+so the repository contains **no dependency files at all**.
 
 Pack once on a configured machine, then restore on any other machine with one command:
 
@@ -142,13 +142,18 @@ LANTERN_QTWEBENGINE_URL=<your-direct-link> ./scripts/download_deps.sh
   "Get the dev files" above, then re-run `./build.sh`.
 - **AI assistant says API key missing**: configure it in Settings, or write it to
   `~/.lantern/api_key`.
-- **Uploading to Gitee is limited**: the repo to commit is only ~26 files
-  (`src/` 19 files + scripts/docs). Upload in two batches (the `src/` directory first,
-  then the rest), or just use `git push` (no file-count limit).
-  Never commit `lib/qt6-dev/` or `build/` (already excluded via `.gitignore`).
+- **Pushing to GitHub**: the repo to commit is only ~26 files
+  (`src/` 19 files + scripts/docs) — just `git push`. Never commit
+  `lib/qt6-dev/` or `build/` (already excluded via `.gitignore`).
 - **Downloads in incognito mode**: saved like normal downloads; incognito only
   skips history/login persistence.
 
+## 📜 License
+
+This project is released under the **GNU Lesser General Public License v3.0**
+(LGPL-3.0). See [LICENSE](LICENSE) for the full text.
+
+- Free to use, modify, and redistribute (including commercially)
 ## 📜 Technical Notes
 
 - Engine: Qt WebEngine (Chromium) — modern HTML5, WebGL, PDF viewing supported

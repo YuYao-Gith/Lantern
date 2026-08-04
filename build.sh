@@ -1,4 +1,5 @@
 #!/bin/bash
+# SPDX-License-Identifier: LGPL-3.0-or-later
 # Lantern 浏览器一键构建脚本（C++/Qt6 WebEngine）
 # 依赖:
 #   - 系统: qt6-base-dev, qt6-declarative-dev（已装则自动使用系统头文件）

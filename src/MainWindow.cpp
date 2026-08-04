@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: LGPL-3.0-or-later
 #include "MainWindow.h"
 #include "BrowserTab.h"
 #include "HistoryManager.h"

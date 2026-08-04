@@ -1,4 +1,5 @@
 #!/bin/bash
+# SPDX-License-Identifier: LGPL-3.0-or-later
 # 下载并解压 QtWebEngine 开发依赖到 lib/qt6-dev
 #
 # 来源：
@@ -28,7 +29,7 @@ if [ -z "$URL" ]; then
     echo "    sudo apt install qt6-webengine-dev qt6-base-dev"
     echo "    （装好后直接运行 ./build.sh 即可，自动使用系统头文件）"
     echo ""
-    echo "  方式二: 从自备依赖包下载（仓库不含大体积依赖，避免 Gitee 上传限制）"
+    echo "  方式二: 从自备依赖包下载（仓库不含大体积依赖，避免仓库过于臃肿）"
     echo "    1. 在另一台已配置好的机器上执行 ./scripts/pack_deps.sh"
     echo "    2. 将生成的 qt6-webengine-dev-linux-amd64.tar.gz 上传到网盘/对象存储"
     echo "    3. 设置直链后重试："

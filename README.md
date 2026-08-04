@@ -77,7 +77,7 @@ LANTERN_QTWEBENGINE_URL=<直链> ./scripts/download_deps.sh
 ```bash
 ./build.sh                # 一键构建，产物在 build/Lantern
 ./run.sh                  # 启动浏览器
-./run.sh https://gitee.com   # 或直接打开指定网址
+./run.sh https://github.com  # 或直接打开指定网址
 ```
 
 ### 4. 配置 AI 助手（可选）
@@ -92,8 +92,8 @@ echo "sk-你的DashScopeKey" > ~/.lantern/api_key
 
 ## 📦 依赖包分发（重要）
 
-QtWebEngine 开发文件体积大（52MB / 1700+ 文件），直接提交仓库会触发
-**Gitee 单次最多上传 20 个文件**的限制，因此仓库中**不包含任何依赖文件**。
+QtWebEngine 开发文件体积大（52MB / 1700+ 文件），直接提交会导致仓库臃肿、
+克隆缓慢（GitHub 单个文件限制 100MB），因此仓库中**不包含任何依赖文件**。
 
 在已配置好的机器上打包一次，之后任何机器都能一条命令还原：
 
@@ -135,10 +135,19 @@ LANTERN_QTWEBENGINE_URL=<你的直链> ./scripts/download_deps.sh
 
 - **构建时提示找不到 QtWebEngine 开发文件**：按上文"获取依赖"三选一补齐后重跑 `./build.sh`。
 - **AI 助手提示缺少 API Key**：在设置里配置，或写入 `~/.lantern/api_key`。
-- **上传到 Gitee 被限制**：仓库提交内容仅约 26 个文件（`src/` 19 个 + 脚本/文档），
-  网页上传可分两批：先传 `src/` 目录，再传其余文件；或直接 `git push`（无文件数限制）。
-  请勿把 `lib/qt6-dev/` 或 `build/` 提交上去（已在 `.gitignore` 中排除）。
+- **推送到 GitHub**：仓库提交内容仅约 26 个文件（`src/` 19 个 + 脚本/文档），
+  直接 `git push` 即可。请勿把 `lib/qt6-dev/` 或 `build/` 提交上去
+  （已在 `.gitignore` 中排除）。
 - **无痕模式下载的文件**：与普通下载一致保存，无痕仅不记录历史/登录态。
+
+## 📜 许可证
+
+本项目基于 **GNU Lesser General Public License v3.0**（LGPL-3.0）发布，
+完整文本见 [LICENSE](LICENSE)。
+
+- 可自由使用、修改、分发本程序（包括商用）
+- 修改本程序本身时，修改部分需以 LGPL 发布
+- 以动态链接方式使用本程序无需开源你的程序（Qt 6 同为 LGPLv3，可放心分发）
 
 ## 📜 技术说明
 

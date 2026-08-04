@@ -1,4 +1,5 @@
 #!/bin/bash
+# SPDX-License-Identifier: LGPL-3.0-or-later
 # Lantern 浏览器一键运行（Qt WebEngine / Chromium 内核）
 cd "$(dirname "$0")"
 if [ ! -x build/Lantern ]; then
